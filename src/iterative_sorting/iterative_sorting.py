@@ -11,8 +11,6 @@ def selection_sort( arr ):
             if arr[x] < arr[smallest_index]:   
                 smallest_index = x
                 # print(f'smallest_index - {smallest_index} number {arr[smallest_index]}')
-            else:
-                pass
         
         # print(f'smallest_index is {smallest_index} with number {arr[smallest_index]}')
         arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
@@ -27,27 +25,33 @@ print(selection_sort([]))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-    sorted = False
+    # sorted = False
 
-    while not sorted:
+    # while not sorted:
 
-        swap = True
+    #     swap = True
 
-        for i in range(0, len(arr) - 1):
-            cur_index = i
+    #     for i in range(0, len(arr) - 1):
+    #         cur_index = i
             
-            if swap == True:
-                if arr[cur_index] > arr[cur_index + 1]:
-                    arr[cur_index], arr[cur_index + 1] = arr[cur_index + 1], arr[cur_index]
-                else:
-                    swap = False
-            else:
-                sorted = True
+    #         if swap == True:
+    #             if arr[cur_index] > arr[cur_index + 1]:
+    #                 arr[cur_index], arr[cur_index + 1] = arr[cur_index + 1], arr[cur_index]
+    #             else:
+    #                 swap = False
+    #         else:
+    #             sorted = True
+
+    for i in range(0, len(arr) - 1):
+
+        for j in range(0, len(arr) - 1 - i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
     return arr
 
 
-print(bubble_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7]))
+print(f'bubble {bubble_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7])}')
 
 
 # STRETCH: implement the Count Sort function below

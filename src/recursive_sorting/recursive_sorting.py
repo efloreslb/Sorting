@@ -36,7 +36,7 @@ print(merge([4,2,8], [3,1,9]))
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
-   if len(arr) == 1:
+   if len(arr) <= 1:
       return arr
 
    half = (len(arr)/2)
@@ -55,6 +55,7 @@ def merge_sort( arr ):
    # return arr
 
 print(f'merge_sort: {merge_sort([14, 20, 1, 5, 0, 4])}')
+# print(f'merge_sort: {merge_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7])}')
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
